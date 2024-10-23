@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Making Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"] {
+            width: 50px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Decision Making Assistant</h1>
+        <form id="decisionForm">
+            <label for="cost">How important is cost (1-10)?</label>
+            <input type="number" id="cost" name="cost" min="1" max="10" required>
+
+            <label for="quality">How important is quality (1-10)?</label>
+            <input type="number" id="quality" name="quality" min="1" max="10" required>
+
+            <label for="time">How important is time (1-10)?</label>
+            <input type="number" id="time" name="time" min="1" max="10" required>
+
+            <button type="submit">Get Decision</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('decisionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const cost = parseInt(document.getElementById('cost').value);
+            const quality = parseInt(document.getElementById('quality').value);
+            const time = parseInt(document.getElementById('time').value);
+            let decision;
+
+            if (cost > quality && cost > time) {
+                decision = "It seems that cost is the most important factor for you. You should choose the budget-friendly option.";
+            } else if (quality > cost && quality > time) {
+                decision = "Quality is your top priority! You should choose the premium option.";
+            } else if (time > cost && time > quality) {
+                decision = "Time matters most! You should pick the fastest option available.";
+            } else {
+                decision = "Your priorities are balanced. Consider a compromise between all three factors.";
+            }
+
+            document.getElementById('result').innerText = decision;
+        });
+    </script>
+</body>
+</html>
