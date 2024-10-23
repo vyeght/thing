@@ -1,0 +1,30 @@
+/* CSS for placing a GIF in the bottom-right corner */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bottom-right-gif {
+    position: fixed;
+    bottom: 10px;   /* Distance from bottom */
+    right: 10px;    /* Distance from right */
+    width: 150px;   /* Adjust size of the GIF */
+    height: auto;   /* Maintain aspect ratio */
+    z-index: 1000;  /* Keep it on top of other elements */
+}
+
+/* Optional: Add some animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Applying spinning animation (optional) */
+.bottom-right-gif {
+    animation: spin 2s infinite linear;
+}
