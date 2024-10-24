@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin GIF</title>
+    <style>
+        .bottom-right-gif {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 150px;
+            height: auto;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://media.tenor.com/52lvDL_6pHsAAAAi/penguin-warcraft-3.gif" alt="Penguin GIF" class="bottom-right-gif">
+
+</body>
+</html>
