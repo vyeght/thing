@@ -3,21 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penguin GIF</title>
-    <style>
-        .bottom-right-gif {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            width: 150px;
-            height: auto;
-            z-index: 1000;
-        }
-    </style>
+    <title>Image in Bottom Right</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <img src=<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJSDN8znN62jXJcAcfycaPjNqZLofV0NF5g&amp;s" alt="Penguin Panda Sticker"/> class="bottom-right-gif">
-
+    <div class="image-container">
+        <img src="<img src="https://files.oaiusercontent.com/file-MJZ08V0aXzFqro1SdpsRJt09?se=2024-10-24T21%3A20%3A30Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscc=max-age%3D299%2C%20immutable%2C%20private&amp;rscd=attachment%3B%20filename%3Dimage.png&amp;sig=gVUetTRY0yca7zz%2BNlOeC4xPO9bdxC806ZvrIVGXTK0%3D" alt="Uploaded image"/>" alt="Image">
+    </div>
 </body>
 </html>
